@@ -33,8 +33,12 @@ export default function WhatsAppEncoder() {
         setEncodedLink(link);
     };
 
-    const copyToClipboard = () => {
-        navigator.clipboard.writeText(encodedLink);
+    const copyToClipboard = async () => {
+        try {
+            await navigator.clipboard.writeText(encodedLink);
+        } catch (err) {
+            console.error('Failed to copy text:', err);
+        }
     };
 
     return (
