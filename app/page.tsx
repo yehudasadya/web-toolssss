@@ -6,24 +6,26 @@ export default function Home() {
       title: "מחולל הודעות וואטסאפ",
       description: "צור קישורי וואטסאפ מותאמים אישית עם הודעה מוכנה מראש",
       icon: "📱",
-      link: "/whatsapp",
+      href: "/whatsapp",  // שינינו מ-link ל-href
       color: "bg-green-500"
     },
+    // נשאיר את השאר לבינתיים לא פעיל
+    /*
     {
       title: "המרת טקסט",
       description: "המר טקסט בין פורמטים שונים - אותיות גדולות, קטנות ועוד",
       icon: "📝",
-      link: "/text",
+      href: "/text",
       color: "bg-blue-500"
     },
     {
       title: "מחשבון תאריכים",
       description: "חשב הפרשי תאריכים, הוסף או החסר ימים מתאריך",
       icon: "📅",
-      link: "/dates",
+      href: "/dates",
       color: "bg-purple-500"
     },
-    // אפשר להוסיף עוד כלים כאן
+    */
   ];
 
   return (
@@ -44,7 +46,7 @@ export default function Home() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {tools.map((tool, index) => (
-            <Link href={tool.link} key={index}>
+            <Link href={tool.href} key={index}>
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300 cursor-pointer border border-gray-100">
                 <div className="text-4xl mb-4">{tool.icon}</div>
                 <h2 className="text-2xl font-semibold mb-2 text-right">{tool.title}</h2>
