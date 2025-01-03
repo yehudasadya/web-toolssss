@@ -1,4 +1,4 @@
-import WhatsAppEncoder from './WhatsAppEncoder';
+import WhatsAppEncoder from '/WhatsAppEncoder';
 
 export default function Home() {
   return (
